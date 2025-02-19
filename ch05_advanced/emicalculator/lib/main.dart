@@ -1,6 +1,6 @@
-import 'package:emicalculator/reusable_card.dart';
+import 'loan_selection_page.dart';
+import 'input_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const EMICalculator());
@@ -36,31 +36,11 @@ class EMICalculator extends StatelessWidget {
         scaffoldBackgroundColor: Colors.blueGrey
       ),
       debugShowCheckedModeBanner: false,
-      home: UserInputPage(),
-    );
-  }
-}
-
-class UserInputPage extends StatefulWidget {
-  const UserInputPage({super.key});
-
-  @override
-  State<UserInputPage> createState() => _UserInputPageState();
-}
-
-class _UserInputPageState extends State<UserInputPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('EMI Calculator')),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          ReusableCard(label: 'Home Loan', icon: FontAwesomeIcons.house),
-          ReusableCard(label: 'Personal Loan', icon: FontAwesomeIcons.handHoldingDollar),
-          ReusableCard(label: 'Car Loan', icon: FontAwesomeIcons.car),
-        ],
-      ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const LoanSelectionPage(),
+        '/input': (context) => const InputScreen(),
+      },
     );
   }
 }
