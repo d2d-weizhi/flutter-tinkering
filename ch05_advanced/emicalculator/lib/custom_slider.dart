@@ -49,7 +49,7 @@ class _CustomSliderState extends State<CustomSlider> {
           inactiveTrackColor: const Color(0xFF99B7D1),
           thumbColor: const Color(0xFF004C8E),
           valueIndicatorTextStyle: const TextStyle(
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
         child: Padding(
@@ -71,7 +71,7 @@ class _CustomSliderState extends State<CustomSlider> {
                 max: widget.maxValue,
                 divisions: (widget.maxValue - widget.minValue) ~/ 1,
                 label: widget.preText != null
-                  ? '${widget.preText}      ${_value.toStringAsFixed(0)}'
+                  ? '${widget.preText} ${_value.toStringAsFixed(0)}'
                   : _value.toStringAsFixed(0),
                 onChanged: (newValue) {
                   setState(() {

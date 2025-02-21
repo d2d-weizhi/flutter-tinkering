@@ -33,7 +33,7 @@ class EMICalculator extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData.light().copyWith(
         appBarTheme: const AppBarTheme(color: Colors.teal),
-        scaffoldBackgroundColor: Colors.blueGrey
+        scaffoldBackgroundColor: Colors.white
       ),
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
