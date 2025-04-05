@@ -1,0 +1,14 @@
+name: using_json_serializable
+description: >-
+  Learning how to use the json_serializable package.
+version: 0.1.0
+
+environment:
+  sdk: '^3.2.0'
+  
+dependencies:
+  json_annotation: ^4.9.0
+
+dev_dependencies:
+  build_runner: ^2.4.15
+  json_serializable: ^6.9.4
